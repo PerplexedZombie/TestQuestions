@@ -1,0 +1,181 @@
+import sys #This is mostly for the exit function
+correctAnswers = 0 #These 3 statements set up further functions
+attempts = 0
+que = 1
+
+def QueS(): #Place holder to make writing the skeleton easier
+	print('Question placeholder')
+	print('')
+	print('A: Option A')
+	print('B: Option B')
+	print('C: Option C')
+	print('D: Option D')
+	print('')
+
+def queNo():
+	global que
+	print('Question ' + str(que)) #This was good in theory bad in practice
+	que += 1
+
+def rig(): #Anti repitition
+	global correctAnswers
+	print('Correct!')
+	correctAnswers += 1
+	print('')
+	print('Correct answers: ' + str(correctAnswers)) #Motivation
+	print('') #I don't know why I have this given how they can't 
+	print('') #proceed until they get the question right
+
+def wrn(): #Anti repitition
+	global attempts
+	global que #Local scopes are annoying
+	print('Try again')
+	print('')
+	print('')
+	que -= 1 #Fixed the bad in practice part
+	attempts += 1
+print('Study Questions')
+while (correctAnswers >= 0) \ #This makes sections
+and (correctAnswers < 10): #means a break can be made
+	while correctAnswers == 0: #Should in theory make a loop
+		queNo() # Anti repitition 
+		print('Question placeholder') #This block is pure placeholder
+		print('')                     # again for skeleton reasons
+		print('A: Option A')
+		print('B: Option B')
+		print('C: Option C')
+		print('D: Option D')
+		print('')
+		answer1 = str(input()) #Nice and simple using answerx-y
+		if answer1 in ('A', 'a', '1'): #checks the string input
+			rig() #Anti repitition
+			break #leaves loop
+		else: #if wrong answer
+			wrn() #Anti repitition
+			continue #Loop
+	while correctAnswers == 1: #tracking answers to move questions
+		queNo() #see earlier blocks
+		QueS() #see earlier blocks
+		answer2 = str(input()) #This then becomes standard for 10 q's
+		if answer2 in ('B', 'b', '2'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 2:
+		queNo()
+		QueS()
+		answer3 = str(input())
+		if answer3 in ('C', 'c', '3'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 3:
+		queNo()
+		QueS()
+		answer4 = str(input())
+		if answer4 in ('D', 'd', '4'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 4:
+		queNo()
+		QueS()
+		answer5 = str(input())
+		if answer5 in ('A', 'a', '1'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 5:
+		queNo()
+		QueS()
+		answer6 = str(input())
+		if answer6 in ('B', 'b', '2'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 6:
+		queNo()
+		QueS()
+		answer7 = str(input())
+		if answer7 in ('C', 'c', '3'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 7:
+		queNo()
+		QueS()
+		answer8 = str(input())
+		if answer8 in ('D', 'd', '4'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 8:
+		queNo()
+		QueS()
+		answer9 = str(input())
+		if answer9 in ('A', 'a', '1'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	while correctAnswers == 9:
+		queNo()
+		QueS()
+		answer10 = str(input())
+		if answer10 in ('B', 'b', 'b'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+print('10 Questions down') #break mentioned earlier
+print('')
+print('Continue? (Yes/No)') #option of leaving
+while True: #loop for simplicity
+  response = input()
+  if response in ('No', 'no'):
+    print('You may have to repeat questions') #I'm sure there is a
+    print('Is this okay (Yes/No)')            #  way of recalling
+    response2 = input()
+    if response2 in ('Yes', 'yes', ''): 
+      sys.exit() #fucn to end script
+    elif response in ('No', 'no'):
+      print('Exiting anyway') #because oh well
+      sys.exit()
+    else:
+      print('That was not an option') #ensure input is one of
+      continue                        # the options
+  if response in ('Yes', 'yes', ''): #continuation
+    print('Next 10 questions')
+    break
+  else:
+    print('That was not an option')
+    continue
+while (correctAnswers >= 10)\
+and (correctAnswers < 20): #next block of questions
+	while correctAnswers == 10:                          
+		queNo()
+		QueS()
+		answer11 = str(input())
+		if answer11 in ('C', 'c', '3'):
+			rig()
+			break
+		else:
+			wrn()
+			continue
+	
